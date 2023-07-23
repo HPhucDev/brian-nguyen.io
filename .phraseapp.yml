@@ -1,0 +1,13 @@
+phraseapp:
+  project_id: 321bc41ee63ab466547b2ea89784da9c
+  file_format: simple_json
+  push:
+    sources:
+      - file: ./src/services/i18n/translations/<locale_name>.json
+        params:
+          update_translations: true
+          format_options:
+            enable_pluralization: false
+  pull:
+    targets:
+      - file: ./src/services/i18n/translations/<locale_name>.json

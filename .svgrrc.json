@@ -1,0 +1,18 @@
+{
+  "typescript": true,
+  "icon": true,
+  "memo": true,
+  "svgoConfig": {
+    "plugins": [
+      {
+        "name": "removeXMLNS"
+      },
+      {
+        "name": "removeUnknownsAndDefaults",
+        "params": {
+          "keepDataAttrs": false
+        }
+      }
+    ]
+  }
+}
