@@ -8,7 +8,7 @@ import Fader from 'components/@common/Fader/Fader';
 import CustomImage from 'components/@common/CustomImage/CustomImage';
 
 import HCMUTE from '../../public/images/hcmute.webp';
-import IDS from '../../public/images/ids.png';
+import IDS_SOFTWARE from '../../public/images/ids.png';
 import Link from 'next/link';
 
 export const ContentSection = styled(Container)(({ theme }) => ({
@@ -128,7 +128,7 @@ export default function Home() {
                     gap: theme.spacing(2),
                   }}
                 >
-                  <CustomImage src={IDS} width={'58'} alt={''} />
+                  <CustomImage src={IDS_SOFTWARE} width={'58'} alt={''} />
                   <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                     <Typography
                       variant={'paragraph01'}
