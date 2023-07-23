@@ -6,7 +6,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 const nextConfig = {
-  distDir: 'build',
+  // distDir: 'build',
   i18n: {
     locales: ['en', 'vi'],
     defaultLocale: process.env.NEXT_PUBLIC_DEFAULT_LOCALE,
