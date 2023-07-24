@@ -181,14 +181,7 @@ const gear = [
     description: 'Develop faster. Run anywhere..',
     link: 'https://www.docker.com',
   },
-  {
-    name: 'Termius',
-    category: 'Software',
-    image: 'https://w7.pngwing.com/pngs/403/426/png-transparent-termius-alt-macos-bigsur-icon.png',
-    description:
-      'Connect with one click from any device. No re-entering IP addresses, ports, and passwords.',
-    link: 'https://termius.com/',
-  },
+
   {
     name: 'Warp',
     category: 'Software',
@@ -262,15 +255,6 @@ const gear = [
     description: 'Video editing with powerful media organisation and incredible performance.',
     link: 'htthttps://apps.apple.com/vn/app/final-cut-pro/id424389933?mt=12ps://dbngin.com/',
   },
-  {
-    name: 'Figma',
-    category: 'Software',
-    image:
-      'https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/8346a41fce8956f9216e1757fcc9c17a_f3VBVRFUez.png',
-    description: 'The leading collaborative design tool for building meaningful products',
-    link: 'https://www.figma.com/downloads/',
-  },
-
   {
     name: 'The North Face Kaban Backpack',
     category: 'Other',
