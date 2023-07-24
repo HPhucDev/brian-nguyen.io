@@ -27,5 +27,12 @@
   "social.zalo": "Zalo",
   "social.twitter": "Twitter",
   "language.en": "English",
-  "language.vi": "Vietnamese"
+  "language.vi": "Vietnamese",
+  "gear.title": "Thiết bị",
+  "gear.description_01": "Hộp công cụ của tôi.",
+  "gear.description_02": "Đây là thiết bị tôi thực sự sở hữu và giới thiệu. Các liên kết liên kết không tính thêm chi phí, tuy nhiên, nó giúp hỗ trợ việc tạo nội dung của tôi.",
+  "gear.software": "Phần mềm",
+  "projects.title": "Dự án",
+  "projects.description_01": "Tôi làm một số dự án trong thời gian làm việc của tôi. Nó giúp tôi học công nghệ mới và thử nghiệm xây dựng mọi thứ.",
+  "projects.description_02": "Hãy theo dõi, danh sách ngày càng dài 🤪"
 }

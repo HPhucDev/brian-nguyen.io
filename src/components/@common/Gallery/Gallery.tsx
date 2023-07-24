@@ -12,6 +12,7 @@ import coder from '../../../../public/images/gallery/coder.jpeg';
 import codesleep from '../../../../public/images/gallery/code-sleep.jpeg';
 import Halo from './Halo';
 import { theme } from 'theme';
+import useMedia from 'hooks/useMedia';
 
 const ticketingFont = localFont({
   src: '../../../../public/ticketing.woff2',
@@ -203,6 +204,7 @@ function Photo({
 }
 
 export default function Gallery() {
+  const { isSmall, isMedium } = useMedia();
   return (
     <StyledContainer>
       <Photo
@@ -215,38 +217,45 @@ export default function Gallery() {
         left={-86}
         index={1}
       />
-      <Photo
-        src={coder}
-        meta="2020-07-04"
-        alt="Software Engineer"
-        width={230}
-        height={250}
-        rotate={6.3}
-        left={188}
-        index={2}
-        flipDirection="left"
-      />
-      <Photo
-        src={mypasssion}
-        meta="2021-05-20"
-        alt="My Passion"
-        width={280}
-        height={235}
-        rotate={-5.4}
-        left={343}
-        index={3}
-      />
-      <Photo
-        src={codesleep}
-        meta="2018-10-10"
-        alt={'A boy dreams to create value for others via software products'}
-        width={220}
-        height={260}
-        rotate={7.6}
-        left={557}
-        index={4}
-        flipDirection="left"
-      />
+      {!isSmall && (
+        <Photo
+          src={coder}
+          meta="2020-07-04"
+          alt="Software Engineer"
+          width={230}
+          height={250}
+          rotate={6.3}
+          left={188}
+          index={2}
+          flipDirection="left"
+        />
+      )}
+      {!isMedium && (
+        <>
+          {' '}
+          <Photo
+            src={mypasssion}
+            meta="2021-05-20"
+            alt="My Passion"
+            width={280}
+            height={235}
+            rotate={-5.4}
+            left={343}
+            index={3}
+          />
+          <Photo
+            src={codesleep}
+            meta="2018-10-10"
+            alt={'A boy dreams to create value for others via software products'}
+            width={220}
+            height={260}
+            rotate={7.6}
+            left={557}
+            index={4}
+            flipDirection="left"
+          />
+        </>
+      )}
     </StyledContainer>
   );
 }

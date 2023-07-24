@@ -47,23 +47,23 @@ export const ContentRightSection = styled(Box)(({ theme }) => ({
   },
 }));
 
-export default function Home() {
+export default function About() {
   return (
     <Fader>
-      <Container sx={{ marginTop: theme.spacing(10) }}>
+      <Container sx={{ marginY: theme.spacing(10) }}>
         <Stack sx={{ marginX: theme.spacing(5) }}>
           <Typography variant={'heading03'}>
             <FormattedMessage id={'about.hero.title'} />
           </Typography>
-          <Typography>
+          <Typography variant={'paragraph01'}>
             <FormattedMessage id={'about.hero.description'} />
           </Typography>
         </Stack>
       </Container>
-      <Container sx={{ marginY: theme.spacing(15) }}>
+      <Container>
         <Gallery />
       </Container>
-      <Container sx={{ marginY: theme.spacing(15) }}>
+      <Container>
         <ContentSection>
           <ContentLeftSection>
             <Typography variant={'paragraph01'} sx={{ color: theme.palette.neutral01[300] }}>
@@ -79,6 +79,8 @@ export default function Home() {
             </Typography>
           </ContentRightSection>
         </ContentSection>
+      </Container>
+      <Container>
         <ContentSection>
           <ContentLeftSection>
             <Typography variant={'paragraph01'} sx={{ color: theme.palette.neutral01[300] }}>
@@ -92,7 +94,9 @@ export default function Home() {
             <ConnectSocialSection />
           </ContentRightSection>
         </ContentSection>
-        <ContentSection>
+      </Container>
+      <Container>
+        <ContentSection sx={{ marginBottom: theme.spacing(15) }}>
           <ContentLeftSection>
             <Typography variant={'paragraph01'} sx={{ color: theme.palette.neutral01[300] }}>
               <FormattedMessage id={'about.experience.title'} />

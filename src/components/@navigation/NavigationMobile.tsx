@@ -84,12 +84,12 @@ const NavigationMobile = () => {
                 <FormattedMessage id="navigation.blog" />
               </Typography>
             </MenuMobileLink>
-            <MenuMobileLink href="/packages">
+            <MenuMobileLink href="/projects">
               <Typography variant="heading05">
                 <FormattedMessage id="navigation.project" />
               </Typography>
             </MenuMobileLink>
-            <MenuMobileLink href="/packages">
+            <MenuMobileLink href="/gear">
               <Typography variant="heading05">
                 <FormattedMessage id="navigation.gear" />
               </Typography>

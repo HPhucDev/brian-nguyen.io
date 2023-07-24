@@ -156,7 +156,7 @@ const Navigation = () => {
                   </Typography>
                 </NavigationButton>
               </Link>
-              <Link href="/packages">
+              <Link href="/projects">
                 <NavigationButton
                   variant="text"
                   sx={(theme: Theme) => ({ color: theme.palette.text.primary })}
@@ -166,7 +166,7 @@ const Navigation = () => {
                   </Typography>
                 </NavigationButton>
               </Link>
-              <Link href="/packages">
+              <Link href="/gear">
                 <NavigationButton
                   variant="text"
                   sx={(theme: Theme) => ({ color: theme.palette.text.primary })}

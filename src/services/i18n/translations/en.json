@@ -27,5 +27,12 @@
   "social.zalo": "Zalo",
   "social.twitter": "Twitter",
   "language.en": "English",
-  "language.vi": "Vietnamese"
+  "language.vi": "Vietnamese",
+  "gear.title": "Gear",
+  "gear.description_01": "My toolbox.",
+  "gear.description_02": "This is gear I actually own and recommend. The affiliate links come at no extra cost, but it does, however, help support my content creation.",
+  "gear.software": "Software",
+  "projects.title": "Projects",
+  "projects.description_01": "I do some pet projects in my work time. It helps me learn new tech and experiment on building things.",
+  "projects.description_02": "Stay tuned, the list is getting longer 🤪"
 }
