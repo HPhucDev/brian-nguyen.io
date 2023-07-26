@@ -1,18 +1,11 @@
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 import CustomImage from 'components/@common/CustomImage/CustomImage';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 import COMING_SOON from '../../public/images/coming-soon.jpg';
 import { theme } from 'theme';
 const NotFound = () => {
   const router = useRouter();
-
-  useEffect(() => {
-    setTimeout(() => {
-      router.push('/');
-    }, 6000);
-  }, [router]);
 
   return (
     <Container>
@@ -35,9 +28,9 @@ const NotFound = () => {
         <Typography variant="heading01" component="p">
           Please Stay With us!
         </Typography>
-        <Typography variant="heading04" component="p">
-          Redirecting to Home...
-        </Typography>
+        <Button variant="outlined" onClick={() => router.push('/')}>
+          Redirect to Home...
+        </Button>
       </Box>
     </Container>
   );
