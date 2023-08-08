@@ -207,7 +207,7 @@ export default function Gallery() {
   const { isSmall, isMedium } = useMedia();
   return (
     <StyledContainer>
-      {/* <Photo
+      <Photo
         src={myworld}
         meta="2022-10-09"
         alt="Phuc and Thao"
@@ -216,7 +216,7 @@ export default function Gallery() {
         rotate={-6}
         left={-86}
         index={1}
-      /> */}
+      />
 
       <Photo
         src={coder}
