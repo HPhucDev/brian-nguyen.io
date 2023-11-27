@@ -1,7 +1,7 @@
 version: '3'
 services:
-   belga-intranet-2023-nextjs:
-    image: belga-intranet-2023:nextjs
+   h-p-portfolio-nextjs:
+    image: h-p-portfolio-nextjs:v1.0
     restart: unless-stopped
     build: .
     ports:
