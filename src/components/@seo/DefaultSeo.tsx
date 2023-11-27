@@ -8,7 +8,7 @@ import IntroImage from '/public/images/home_hero-image.png';
 
 const DefaultSEO = () => {
   const intl = useIntl();
-  const baseUrl = process.env.NEXT_PUBLIC_FRONTEND_DOMAIN || 'https://belga.press/';
+  const baseUrl = process.env.NEXT_PUBLIC_FRONTEND_DOMAIN || 'https://hoangphuc.lightup.io.vn/';
 
   return (
     <>
@@ -17,7 +17,7 @@ const DefaultSEO = () => {
         dangerouslySetAllPagesToNoFollow={config.BUILD_ENV !== 'production'}
         titleTemplate="Hoang Phuc - %s"
         defaultTitle="Hoang Phuc"
-        description={intl.formatMessage({ id: 'home.intro.description' })}
+        description={"A boy dreams to create value for others via software products "}
         canonical={baseUrl}
         openGraph={{
           url: baseUrl,
@@ -29,26 +29,24 @@ const DefaultSEO = () => {
               url: baseUrl + IntroImage.src,
               width: IntroImage.width,
               height: IntroImage.height,
-              alt: intl.formatMessage({ id: 'home.intro.description' }),
               type: 'image/png',
             },
           ],
-          siteName: 'Belga.press',
+          siteName: 'https://hoangphuc.lightup.io.vn',
         }}
         twitter={{
-          handle: '@BelgaNewsAgency',
+          handle: '@HPhucDev',
           cardType: 'summary_large_image',
         }}
       />
       <SocialProfileJsonLd
         type="Organization"
-        name="Belga.press"
+        name="HoangPhuc.Developer"
         url={baseUrl}
         sameAs={[
-          'https://www.facebook.com/belganewsagency',
-          'https://www.youtube.com/user/BelgaNewsAgency',
-          'https://www.linkedin.com/company/belga-news-agency/',
-          'https://twitter.com/BelgaNewsAgency',
+          'https://www.facebook.com/hoangphucdevelopervn',
+          'https://www.linkedin.com/in/hoang-phuc-developer/',
+          'https://twitter.com/HPhucDev',
         ]}
       />
       <LogoJsonLd logo={Logo.src} url={Logo.src} />
