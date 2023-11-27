@@ -8,7 +8,7 @@ import IntroImage from '/public/images/home_hero-image.png';
 
 const DefaultSEO = () => {
   const intl = useIntl();
-  const baseUrl = process.env.NEXT_PUBLIC_FRONTEND_DOMAIN || 'https://hoangphuc.lightup.io.vn/';
+  const baseUrl = 'https://hoangphuc.lightup.io.vn/';
 
   return (
     <>
