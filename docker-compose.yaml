@@ -7,8 +7,8 @@ services:
     ports:
       - '127.0.0.1:3000:3000'
     networks:
-      -  belga-intranet-2023_FO_network
+      -  h-p-portfolio_network
 
 networks:
-   belga-intranet-2023_FO_network:
+   h-p-portfolio_network:
     external: true
