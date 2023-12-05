@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "env-path -p .env.development next dev",
     "build": "next build",
     "build:dev": "env-path -p .env.development next build && env-path -p .env.development npm run postbuild",
     "build:prod": "env-path -p .env.production next build && env-path -p .env.production npm run postbuild",
@@ -29,6 +29,7 @@
     "@next/bundle-analyzer": "^13.4.9",
     "@next/font": "^13.4.12",
     "@sentry/nextjs": "^7.57.0",
+    "@tanstack/react-query": "^4.29.25",
     "@types/node": "20.4.1",
     "@types/react": "^18.2.14",
     "@types/react-dom": "18.2.6",

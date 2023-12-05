@@ -13,6 +13,7 @@ import CookiesScript from 'components/@seo/CookiesScript';
 import DefaultSEO from 'components/@seo/DefaultSeo';
 import GtmBodyScript from 'components/@seo/GtmBodyScript';
 import GtmHeaderScript from 'components/@seo/GtmHeaderScript';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 type PageProps = {};
 
@@ -20,55 +21,27 @@ interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
   pageProps: PageProps;
 }
-
-// declare global {
-//   interface Window {
-//     posthog: typeof import('posthog-js').posthog;
-//   }
-// }
+// Create a client
+const queryClient = new QueryClient();
 
 function MyApp(props: MyAppProps) {
   const { Component } = props;
-  // const [posthogInstance, setPosthogInstance] = useState<PostHog>();
-
-  // const cookies = useCookieConsent();
-
-  // usePostHog(config.POSTHOG_ID, {
-  //   loaded: (posthog) => {
-  //     if (cookies.analytics) {
-  //       posthog.opt_in_capturing();
-  //     } else {
-  //       posthog.opt_out_capturing();
-  //     }
-  //     window.posthog = posthog;
-
-  //     setPosthogInstance(posthog);
-  //   },
-  // });
-
-  // useEffect(() => {
-  //   if (!posthogInstance) return;
-
-  //   if (cookies.analytics && isProd()) {
-  //     posthogInstance.opt_in_capturing();
-  //   } else {
-  //     posthogInstance.opt_out_capturing();
-  //   }
-  // }, [posthogInstance, cookies]);
 
   return (
-    <ThemeContext>
-      <CssBaseline />
-      <IntlProvider>
-        <PageContainer>
-          <DefaultSEO />
-          <Component {...props.pageProps} />
-          <CookiesScript />
-          <GtmHeaderScript />
-          <GtmBodyScript />
-        </PageContainer>
-      </IntlProvider>
-    </ThemeContext>
+    <QueryClientProvider client={queryClient}>
+      <ThemeContext>
+        <CssBaseline />
+        <IntlProvider>
+          <PageContainer>
+            <DefaultSEO />
+            <Component {...props.pageProps} />
+            <CookiesScript />
+            <GtmHeaderScript />
+            <GtmBodyScript />
+          </PageContainer>
+        </IntlProvider>
+      </ThemeContext>
+    </QueryClientProvider>
   );
 }
 export default MyApp;

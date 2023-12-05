@@ -91,7 +91,7 @@ const TimeLineCustomItem = ({ children }: TimeLineCustomItemProps) => {
 
 export default function Projects() {
   return (
-    <Fader>
+    <>
       <Container sx={{ marginTop: theme.spacing(10) }}>
         <Stack sx={{ marginX: theme.spacing(5) }}>
           <Typography variant={'heading03'}>
@@ -112,7 +112,7 @@ export default function Projects() {
           ))}
         </Timeline>
       </Container>
-    </Fader>
+    </>
   );
 }
 
