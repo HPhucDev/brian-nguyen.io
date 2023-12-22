@@ -79,7 +79,7 @@ const NavigationMobile = () => {
                 <FormattedMessage id="navigation.about" />
               </Typography>
             </MenuMobileLink>
-            <MenuMobileLink href="/packages">
+            <MenuMobileLink href="/blog">
               <Typography variant="heading05">
                 <FormattedMessage id="navigation.blog" />
               </Typography>

@@ -13,70 +13,70 @@ interface BlogItemProps {
 }
 
 const BlogItem = ({ data }: BlogItemProps) => (
-  <ListItem sx={{ display: 'flex', gap: 4, alignItems: 'center' }}>
-    <Box
-      sx={{
-        position: 'relative',
-        borderRadius: theme.spacing(2),
-        overflow: 'hidden',
-        backgroundColor: theme.palette.neutral01[700],
-        aspectRatio: 1,
-        width: { xs: '6rem', md: '10rem' },
-        minWidth: { xs: '6rem', md: '10rem' },
-        height: { xs: '6rem', md: '10rem' },
-        boxShadow: 4,
-      }}
-    >
-      <Image
-        src={data?.cover || 'https://flowbite.com/docs/images/blog/image-1.jpg'}
-        alt=""
-        layout="fill"
-        objectFit="cover"
-      />
-    </Box>
-    <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-between', gap: 2 }}>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-        <Typography variant={'paragraph01'} sx={{ color: 'primary.main', lineClamp: 2 }}>
-          {data?.title}
-        </Typography>
-        <Typography
-          variant={'paragraph01'}
-          sx={{ color: theme.palette.neutral01[300], lineClamp: 2, fontSize: '14px' }}
-        >
-          {data?.excerpt}
-        </Typography>
+  <Link
+    href={data?.link}
+    target="_blank"
+    rel="noreferrer"
+    sx={{
+      textDecoration: 'none',
+      ':hover': {
+        transform: 'translateY(-5px)',
+      },
+    }}
+  >
+    <ListItem sx={{ display: 'flex', gap: 4, alignItems: 'center' }}>
+      <Box
+        sx={{
+          position: 'relative',
+          borderRadius: theme.spacing(2),
+          overflow: 'hidden',
+          backgroundColor: theme.palette.neutral01[700],
+          aspectRatio: 1,
+          width: { xs: '6rem', md: '10rem' },
+          minWidth: { xs: '6rem', md: '10rem' },
+          height: { xs: '6rem', md: '10rem' },
+          boxShadow: 4,
+        }}
+      >
+        <Image
+          src={data?.cover || 'https://flowbite.com/docs/images/blog/image-1.jpg'}
+          alt=""
+          layout="fill"
+          objectFit="cover"
+        />
       </Box>
-      <Box>
-        <Link
-          variant="body2"
-          href={data?.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginLeft: 'auto',
-            paddingY: theme.spacing(0.5),
-            paddingX: theme.spacing(2),
-            borderRadius: theme.spacing(2),
-            backgroundColor: theme.palette.neutral01[100],
-            textDecoration: 'none',
-            '&:hover': {
-              backgroundColor: theme.palette.neutral01[200],
-            },
-          }}
-        >
+      <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-between', gap: 2 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
           <Typography
-            variant="paragraph02"
-            sx={{ textAlign: 'center', color: theme.palette.neutral01[700] }}
+            variant={'paragraph01'}
+            sx={{
+              color: theme.palette.neutral01[100],
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              WebkitBoxOrient: 'vertical',
+              WebkitLineClamp: 2,
+            }}
           >
-            Get
+            {data?.title}
           </Typography>
-        </Link>
+          <Typography
+            variant={'paragraph02'}
+            sx={{
+              color: theme.palette.neutral01[300],
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              maxWidth: { lg: '12rem', md: '9rem', sm: '7rem', xs: '7rem' },
+              whiteSpace: 'nowrap',
+              WebkitBoxOrient: 'vertical',
+              WebkitLineClamp: 2,
+            }}
+          >
+            {data?.excerpt}
+          </Typography>
+        </Box>
       </Box>
-    </Box>
-  </ListItem>
+    </ListItem>{' '}
+  </Link>
 );
 
 const fetchReadingList = (page = 0, search = 'type:article') =>
